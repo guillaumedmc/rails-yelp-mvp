@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+    Bootstrap
+  </a>
+  </nav>
+
+<div class="container">
+<h1>Restaurant list</h1>
+
+<%= link_to '+ Add a new restaurant', new_restaurant_path %>
+
+  <% @restaurants.each do |resto| %>
+  <ul>
+    <li><h3> <%= link_to resto.name, restaurant_path(resto)  %></h3></li>
+  </ul>
+  <!--   <p> <strong> <%= resto.category %></strong></p>
+    <p><em><%= resto.address %> </em> - <%= resto.phone_number %></p>
+    <p> <%= resto.category %></p> -->
+  <% end %>
+</div>
